@@ -7,9 +7,8 @@ Reinforcement Learning is a type of machine learning technique in which agent le
  
 Project 1: Mountain Car -v0
 
-![mountain car ](https://user-images.githubusercontent.com/62186578/231129451-86730b35-e433-4f7d-9718-864b354ef77a.gif)
 
-The Mountain Car -v0 file consists of three types of coding files
+The Classic control file consists of three types of coding files
 
 (i) Basic.py  
     The code above is an implementation of a reinforcement learning problem using the OpenAI Gym library. Specifically, the MountainCar-v0 environment is used, which is a classic problem in the field of reinforcement learning. The main loop of the code is executed for a total of 40 episodes. Within each episode, the environment is reset and the initial state is obtained. Then, a while loop is executed until the episode is complete, which is determined by the "done" variable. In each iteration of the while loop, the current state is rendered, an action is selected from the action space using the ".sample()" method, and the next state, reward, done, and info are obtained by calling the ".step(action)" method of the environment. The total reward for the episode is updated by adding the reward obtained in the current step. Finally, the current state is updated to the next state.
@@ -33,7 +32,21 @@ The agent uses an epsilon-greedy policy, with epsilon initialized to 1.0 and dec
 
 The agent's performance is evaluated over 100 episodes, and the scores are plotted to visualize the agent's learning progress. The training process can take some time, but the agent can eventually learn to solve the environment by reaching the top of the hill within the maximum number of allowed steps. The code also includes a random policy function to compare the performance of the DQN agent with a random agent that selects actions randomly, without learning from previous experiences.
 
-![Training ](https://user-images.githubusercontent.com/62186578/231133544-d334a273-055d-4d7d-8a57-72f7890a71f0.png)
+(iv) Pytorch.py
+
+The above code The random-policy function demonstrates a random policy where the agent
+takes random actions in the environment, serving as a baseline for compari-
+son against the DQN’s learned policy.The main execution block initializes the
+MountainCar-v0 environment, creates an instance of the DQNAgent, and trains
+the agent using the train-dqn function. The training progress is visualized by
+plotting the scores achieved in each episode.
+This code leverages PyTorch to implement a DQN for solving the MountainCar-
+v0 task, demonstrating the key components of a reinforcement learning system,
+including neural network architecture, experience replay, and epsilon-greedy ex-
+ploration. The agent learns to navigate the environment and achieve the goal
+state through iterative training episodes. The resulting plot provides insights
+into the learning progress, showcasing the agent’s ability to accumulate rewards
+
 
 
 
